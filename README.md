@@ -85,6 +85,6 @@
 2. **Enter in directory:**
    cd pygame_velho_oeste
 
-4. **Execute the file**
+4. **Execute the file:**
    python main.py
 
