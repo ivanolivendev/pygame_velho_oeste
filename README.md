@@ -1,83 +1,83 @@
-# Tiro ao Alvo
+# Target Shooting
 
-"Tiro ao Alvo" é um jogo 2D desenvolvido em Python com Pygame, onde o objetivo é acertar alvos móveis para marcar pontos. Escolha entre três níveis de dificuldade que afetam a velocidade dos alvos.
+"Target Shooting" is a 2D game developed in Python using Pygame, where the objective is to hit moving targets to score points. Choose between three difficulty levels that affect the speed of the targets.
 
-## Arquivos Necessários
+## Necessary Files
 
-- **Plano de fundo:** `assets/imgs/bg.png`
-- **Fonte:** `assets/fonts/PixelGameFont.ttf`
-- **Alvo:** `assets/imgs/target.png`
-- **Mira:** `assets/imgs/mouse.png`
-- **Disparo:** `assets/audio/disparo.mp3`
+- **Background:** `assets/imgs/bg.png`
+- **Font:** `assets/fonts/PixelGameFont.ttf`
+- **Target:** `assets/imgs/target.png`
+- **Crosshair:** `assets/imgs/mouse.png`
+- **Shot Sound:** `assets/audio/disparo.mp3`
 
-## Como Jogar
+## How to Play
 
-1. **Inicialização do Jogo**
-   - Execute o script principal para iniciar o jogo.
-   - A tela principal exibe três opções de dificuldade: Fácil, Médio e Difícil.
-   - Clique na dificuldade desejada para começar o jogo.
+1. **Game Initialization**
+   - Run the main script to start the game.
+   - The main screen displays three difficulty options: Easy, Medium, and Hard.
+   - Click on the desired difficulty to start the game.
 
-2. **Jogabilidade**
-   - Mova o mouse para controlar a mira.
-   - Clique com o botão esquerdo do mouse para disparar.
-   - A cada acerto, um novo alvo aparecerá em uma posição aleatória.
-   - O jogo termina quando o tempo se esgota.
+2. **Gameplay**
+   - Move the mouse to control the crosshair.
+   - Click the left mouse button to shoot.
+   - With each hit, a new target will appear at a random position.
+   - The game ends when the time runs out.
 
-3. **Pontuação**
-   - A pontuação é exibida no canto superior esquerdo da tela.
-   - O tempo restante é exibido logo abaixo da pontuação.
+3. **Scoring**
+   - The score is displayed in the upper left corner of the screen.
+   - The remaining time is shown just below the score.
 
-4. **Pausa**
-   - Pressione a tecla ESC para pausar o jogo.
-   - Na tela de pausa, o recorde atual será exibido.
-   - Pressione ESC novamente para retomar o jogo.
+4. **Pause**
+   - Press the ESC key to pause the game.
+   - The current high score will be displayed on the pause screen.
+   - Press ESC again to resume the game.
 
-## Controles
+## Controls
 
 - **Mouse:**
-  - Mover o mouse: Controla a posição da mira.
-  - Botão esquerdo do mouse: Dispara.
+  - Move the mouse: Controls the position of the crosshair.
+  - Left mouse button: Shoots.
 
-- **Teclado:**
-  - Tecla ESC: Pausa ou retoma o jogo.
+- **Keyboard:**
+  - ESC key: Pauses or resumes the game.
 
-## Dificuldades
+## Difficulty Levels
 
-- **Fácil:** Alvos estáticos.
-- **Médio:** Alvos se movem a cada 0.1 segundo.
-- **Difícil:** Alvos se movem a cada 0.3 segundo.
+- **Easy:** Static targets.
+- **Medium:** Targets move every 0.1 seconds.
+- **Hard:** Targets move every 0.3 seconds.
 
 ## Classes
 
-### Alvo
+### Target
 
-- **`__init__`:** Inicializa a classe `Alvo` carregando a imagem do alvo, definindo sua escala e posição aleatória na tela.
-- **`definir_tempo_movimento`:** Define o tempo entre movimentos dos alvos com base na dificuldade escolhida.
-- **`update`:** Atualiza a posição do alvo a cada frame, invertendo sua direção ao atingir as bordas da tela.
+- **`__init__`:** Initializes the `Target` class by loading the target image, setting its scale, and positioning it randomly on the screen.
+- **`set_movement_time`:** Sets the time between target movements based on the chosen difficulty.
+- **`update`:** Updates the target's position each frame, reversing its direction when it hits the screen edges.
 
-### Mira
+### Crosshair
 
-- **`__init__`:** Inicializa a classe `Mira`, carregando a imagem da mira e o som do disparo.
-- **`update`:** Atualiza a posição da mira para coincidir com a posição do cursor do mouse.
-- **`shoot`:** Executa o som do disparo e verifica colisões entre a mira e o alvo, incrementando a pontuação e reposicionando o alvo se atingido.
+- **`__init__`:** Initializes the `Crosshair` class, loading the crosshair image and the shot sound.
+- **`update`:** Updates the position of the crosshair to match the mouse cursor's position.
+- **`shoot`:** Plays the shot sound and checks for collisions between the crosshair and the target, increasing the score and repositioning the target if hit.
 
-## Estrutura do Código
+## Code Structure
 
-- **`inicializa_jogo()`:** Configura e inicia a janela do jogo.
-- **`carrega_fundo()`:** Carrega a imagem de fundo e a ajusta ao tamanho da tela.
-- **`exibe_pontuacao()`:** Mostra a pontuação atual na tela.
-- **`exibe_tempo()`:** Mostra o tempo restante na tela.
-- **`exibe_tela_pausa()`:** Exibe as instruções de pausa e o recorde.
-- **`desenha_menu()`:** Desenha o menu de seleção de dificuldade.
-- **`verifica_clique_botao()`:** Verifica se o jogador clicou em um botão de dificuldade.
+- **`initialize_game()`:** Sets up and starts the game window.
+- **`load_background()`:** Loads the background image and adjusts it to fit the screen size.
+- **`display_score()`:** Shows the current score on the screen.
+- **`display_time()`:** Shows the remaining time on the screen.
+- **`display_pause_screen()`:** Displays pause instructions and the high score.
+- **`draw_menu()`:** Draws the difficulty selection menu.
+- **`check_button_click()`:** Checks if the player clicked on a difficulty button.
 
-## Requisitos
+## Requirements
 
 - Python 3.x
 - Pygame
 
-## Instalação
+## Installation
 
-1. **Clone o repositório:**
+1. **Clone the repository:**
    ```sh
-   git clone https://github.com/seu-usuario/tiro-ao-alvo.git
+   git clone https://github.com/ivanolivendev/pygame_velho_oeste.git
