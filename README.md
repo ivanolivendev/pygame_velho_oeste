@@ -76,8 +76,15 @@
 - Python 3.x
 - Pygame
 
-## Installation
+## Installation and Execution
 
 1. **Clone the repository:**
    ```sh
    git clone https://github.com/ivanolivendev/pygame_velho_oeste.git
+
+2. **Enter in directory:**
+   cd pygame_velho_oeste
+
+4. **Execute the file**
+   python main.py
+
